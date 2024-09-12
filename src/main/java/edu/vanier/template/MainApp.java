@@ -22,14 +22,12 @@ public class MainApp extends Application {
         btn.setText("Say 'Hello World'");
 
         /*
-        Anonymous & instantaneous class: More compact code
-        You don't need to check for the event source
+        Utilizing lambda expressions to simplify the process
+        If we add {} after the arrow, we can do multiple actions
          */
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Anonymous inner class...");
-            }
+        btn.setOnAction(event -> {
+            System.out.println("Lambda expression working...");
+            System.out.println("This is good...");
         });
 
 
